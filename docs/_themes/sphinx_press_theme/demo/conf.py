@@ -2,7 +2,7 @@
 #
 # This file only contains a selection of the most common options. For a full
 # list see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
+# http://www.sphinx-doc.org/en/master/config
 
 # -- Path setup --------------------------------------------------------------
 
@@ -17,17 +17,25 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'read-thre-docs-sample'
-copyright = '2020, Kogia-sima'
-author = 'Kogia-sima'
+project = 'demo'
+copyright = '2019, Eduardo'
+author = 'Eduardo'
+
+# The full version, including alpha/beta/rc tags
+release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
 
+master_doc = 'source/index'
+
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark']
+extensions = [
+    'sphinx.ext.mathjax',
+    'sphinx.ext.autodoc',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -44,11 +52,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'press'
-html_theme_path = ["_themes",]
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-master_doc = 'index'
